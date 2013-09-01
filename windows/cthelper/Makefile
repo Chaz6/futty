@@ -29,9 +29,9 @@ SRC = cthelper.c buffer.c buffer.h dump.c debug.h
 OBJ = cthelper.o buffer.o message.o $(APUE_OBJ) $(DBUG_OBJ)
 
 default: all
-all: cthelper.exe
+all: cthelper64.exe
 
-cthelper.exe: $(OBJ)
+cthelper64.exe: $(OBJ)
 	$(q) $(LINK) $(LDFLAGS) -o $@ $(OBJ) $(LDLIBS)
 cthelper.o: cthelper.c cthelper.h ptyfork.h buffer.h debug.h
 buffer.o: buffer.c buffer.h debug.h
